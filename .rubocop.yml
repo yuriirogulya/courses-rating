@@ -8,10 +8,12 @@ AllCops:
     - 'app/controllers/rater_controller.rb'
 
 
+
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context', 'it']
   Exclude:
     - 'config/environments/*.rb'
+    - 'config/routes.rb'
 
 Metrics/LineLength:
   Max: 100
