@@ -22,7 +22,7 @@ desc_pivorak   = "We at #pivorak believe that knowledge should be shared.\n
 This summer we are gathering a group of experienced Ruby developers to teach a
  2-month intensive Ruby & Ruby on Rails course to a class\n
 of (almost) complete beginners."
-url_pivorak    = 'https://pivorak.com/courses/seasons/ruby-2018'
+url_pivorak = 'https://pivorak.com/courses/seasons/ruby-2018'
 
 cities = File.read('app/assets/files/cities.yml').split
 cities.each do |city|
@@ -40,4 +40,3 @@ course_pivorak = Course.create!(title:        title_pivorak,
                                 free:         true)
 
 Review.create!(text: 'The best Rugby course', author: user, course: course_pivorak)
-

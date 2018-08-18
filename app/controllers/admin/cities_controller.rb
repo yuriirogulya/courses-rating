@@ -1,6 +1,5 @@
 module Admin
   class CitiesController < Admin::ApplicationController
-
     def index
       super
       @resources = City.page(params[:page]).per(10)

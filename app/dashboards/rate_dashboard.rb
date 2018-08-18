@@ -1,8 +1,8 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class RateDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
-    rater: Field::BelongsTo.with_options(class_name: "User"),
+    rater: Field::BelongsTo.with_options(class_name: 'User'),
     rateable: Field::Polymorphic,
     id: Field::Number,
     rater_id: Field::Number,
@@ -12,28 +12,28 @@ class RateDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime
   }.freeze
 
-  COLLECTION_ATTRIBUTES = [
-    :rater,
-    :rateable,
-    :stars
+  COLLECTION_ATTRIBUTES = %i[
+    rater
+    rateable
+    stars
   ].freeze
 
-  SHOW_PAGE_ATTRIBUTES = [
-    :rater,
-    :rateable,
-    :id,
-    :rater_id,
-    :stars,
-    :dimension,
-    :created_at,
-    :updated_at
+  SHOW_PAGE_ATTRIBUTES = %i[
+    rater
+    rateable
+    id
+    rater_id
+    stars
+    dimension
+    created_at
+    updated_at
   ].freeze
 
-  FORM_ATTRIBUTES = [
-    :rater,
-    :rateable,
-    :rater_id,
-    :stars,
-    :dimension
+  FORM_ATTRIBUTES = %i[
+    rater
+    rateable
+    rater_id
+    stars
+    dimension
   ].freeze
 end

@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class CityDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
@@ -6,28 +6,28 @@ class CityDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
-  COLLECTION_ATTRIBUTES = [
-    :name,
-    :courses
+  COLLECTION_ATTRIBUTES = %i[
+    name
+    courses
   ].freeze
 
-  SHOW_PAGE_ATTRIBUTES = [
-    :courses,
-    :id,
-    :name,
-    :created_at,
-    :updated_at
+  SHOW_PAGE_ATTRIBUTES = %i[
+    courses
+    id
+    name
+    created_at
+    updated_at
   ].freeze
 
-  FORM_ATTRIBUTES = [
-    :courses,
-    :name
+  FORM_ATTRIBUTES = %i[
+    courses
+    name
   ].freeze
 
-   def display_resource(city)
-     city.name
-   end
+  def display_resource(city)
+    city.name
+  end
 end

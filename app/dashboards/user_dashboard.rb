@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
@@ -23,54 +23,54 @@ class UserDashboard < Administrate::BaseDashboard
     url: Field::String
   }.freeze
 
-  COLLECTION_ATTRIBUTES = [
-    :first_name,
-    :last_name,
-    :role,
-    :email,
-    :courses,
-    :reviews
+  COLLECTION_ATTRIBUTES = %i[
+    first_name
+    last_name
+    role
+    email
+    courses
+    reviews
   ].freeze
 
-  SHOW_PAGE_ATTRIBUTES = [
-    :courses,
-    :reviews,
-    :id,
-    :first_name,
-    :last_name,
-    :role,
-    :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
-    :created_at,
-    :updated_at,
-    :url
+  SHOW_PAGE_ATTRIBUTES = %i[
+    courses
+    reviews
+    id
+    first_name
+    last_name
+    role
+    email
+    encrypted_password
+    reset_password_token
+    reset_password_sent_at
+    remember_created_at
+    sign_in_count
+    current_sign_in_at
+    last_sign_in_at
+    current_sign_in_ip
+    last_sign_in_ip
+    created_at
+    updated_at
+    url
   ].freeze
 
-  FORM_ATTRIBUTES = [
-    :courses,
-    :reviews,
-    :first_name,
-    :last_name,
-    :role,
-    :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
-    :url
+  FORM_ATTRIBUTES = %i[
+    courses
+    reviews
+    first_name
+    last_name
+    role
+    email
+    encrypted_password
+    reset_password_token
+    reset_password_sent_at
+    remember_created_at
+    sign_in_count
+    current_sign_in_at
+    last_sign_in_at
+    current_sign_in_ip
+    last_sign_in_ip
+    url
   ].freeze
 
   def display_resource(user)

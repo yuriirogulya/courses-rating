@@ -5,9 +5,9 @@ module Admin
     #
     def index
       super
-      @resources = Review.
-        page(params[:page]).
-        per(10)
+      @resources = Review
+                   .page(params[:page])
+                   .per(10)
     end
 
     # Define a custom finder by overriding the `find_resource` method:

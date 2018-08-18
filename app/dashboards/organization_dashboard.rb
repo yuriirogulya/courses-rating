@@ -1,4 +1,4 @@
-require "administrate/base_dashboard"
+require 'administrate/base_dashboard'
 
 class OrganizationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
@@ -11,27 +11,27 @@ class OrganizationDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime
   }.freeze
 
-  COLLECTION_ATTRIBUTES = [
-    :name,
-    :courses,
-    :site
+  COLLECTION_ATTRIBUTES = %i[
+    name
+    courses
+    site
   ].freeze
 
-  SHOW_PAGE_ATTRIBUTES = [
-    :courses,
-    :id,
-    :name,
-    :site,
-    :description,
-    :created_at,
-    :updated_at
+  SHOW_PAGE_ATTRIBUTES = %i[
+    courses
+    id
+    name
+    site
+    description
+    created_at
+    updated_at
   ].freeze
 
-  FORM_ATTRIBUTES = [
-    :courses,
-    :name,
-    :site,
-    :description
+  FORM_ATTRIBUTES = %i[
+    courses
+    name
+    site
+    description
   ].freeze
 
   def display_resource(organization)

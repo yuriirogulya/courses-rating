@@ -1,11 +1,10 @@
 module Admin
   class RatesController < Admin::ApplicationController
-
     def index
       super
-      @resources = Rate.
-        page(params[:page]).
-        per(10)
+      @resources = Rate
+                   .page(params[:page])
+                   .per(10)
     end
 
     # Define a custom finder by overriding the `find_resource` method:

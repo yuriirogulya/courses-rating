@@ -7,8 +7,8 @@ local:
   root: <%= Rails.root.join("storage") %>
 
 amazon:
-  service: S3
-  access_key_id: AKIAJEUPSRZQUAHY4GRA
-  secret_access_key: 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
-  region: eu-central-1
-  bucket: pivorakprojectx
+  service:           S3
+  region:            ENV['AMAZON_REGION']
+  bucket:            ENV['AMAZON_BUCKET']
+  access_key_id:     ENV['AMAZON_ACCESS_KEY_ID']
+  secret_access_key: ENV['AMAZON_SECRET_ACCESS_KEY']
